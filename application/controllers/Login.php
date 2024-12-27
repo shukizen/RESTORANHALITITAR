@@ -8,6 +8,7 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Login_model');
+        $this->load->library('session');
     }
 
     public function index()
@@ -36,5 +37,13 @@ class Login extends CI_Controller
                 $this->load->view('login/index.php', $data);
             }
         }
+    }
+
+    public function logout()
+    {
+        // Hapus semua data sesi
+        $this->session->sess_destroy();
+        // Arahkan ke halaman login
+        redirect('login');
     }
 }

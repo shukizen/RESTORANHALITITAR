@@ -1,57 +1,65 @@
+/* login.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
+    background-color: #e3f2fd; /* Warna latar belakang biru muda */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 .login-container {
-    background: #fff;
-    padding: 20px;
+    background-color: #ffffff; /* Warna latar belakang form */
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 450px;
 }
-.login-container h2 {
+
+.login-header {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
 }
-.form-group {
+
+.login-header h2 {
+    color: #1976d2; /* Warna biru cerah */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.input-group {
     margin-bottom: 15px;
 }
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-.form-group input {
-    width: 100%;
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #1976d2; /* Warna biru cerah */
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
 }
+
 .btn {
     width: 100%;
+    border-radius: 5px;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    font-size: 1rem;
+    background-color: #1976d2; /* Warna biru cerah */
+    color: #ffffff; /* Warna teks putih */
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
 }
+
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #1565c0; /* Warna biru gelap saat hover */
 }
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 10px;
+
+.alert {
+    margin-bottom: 20px;
+}
+
+.text-danger {
+    font-size: 0.875rem;
 }

@@ -1,20 +1,20 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller
+class Menu extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
         // Load model jika diperlukan
-        $this->load->model('Dashboard_model');
+        $this->load->model('Menu_model');
     }
 
-    public function index()
+    public function menumakanan()
     {
-        $data['title'] = 'Dashboard';
-        $data['content'] = 'dashboard/dashboard_content'; // Path ke view dashboard_content
+        $data['title'] = 'Menu Makanan';
+        $data['content'] = 'dashboard/menumakanan'; // Path ke view menumakanan
         $this->load->view('dashboard/index', $data);
     }
 }

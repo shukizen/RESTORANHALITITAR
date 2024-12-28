@@ -1,10 +1,9 @@
-/* login.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
-    background-color: #e3f2fd; /* Warna latar belakang biru muda */
-    font-family: 'Arial', sans-serif;
+    background-color: #14476c; 
+    font-family: 'Poppins', sans-serif;
 }
-
 .container {
     display: flex;
     justify-content: center;
@@ -13,7 +12,7 @@ body {
 }
 
 .login-container {
-    background-color: #ffffff; /* Warna latar belakang form */
+    background-color: #ffffff; 
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -27,7 +26,7 @@ body {
 }
 
 .login-header h2 {
-    color: #1976d2; /* Warna biru cerah */
+    color: #1976d2; 
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -38,7 +37,7 @@ body {
 
 .form-control {
     border-radius: 5px;
-    border: 1px solid #1976d2; /* Warna biru cerah */
+    border: 1px solid #1976d2; 
     padding: 10px;
 }
 
@@ -47,13 +46,13 @@ body {
     border-radius: 5px;
     padding: 10px;
     font-size: 1rem;
-    background-color: #1976d2; /* Warna biru cerah */
-    color: #ffffff; /* Warna teks putih */
+    background-color: #1976d2; 
+    color: #ffffff; 
     border: none;
 }
 
 .btn:hover {
-    background-color: #1565c0; /* Warna biru gelap saat hover */
+    background-color: #1565c0; 
 }
 
 .alert {

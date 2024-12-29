@@ -15,6 +15,7 @@ class Menu extends CI_Controller
     {
         $data['title'] = 'Menu Makanan';
         $data['content'] = 'dashboard/menumakanan'; // Path ke view menumakanan
-        $this->load->view('dashboard/index', $data);
+        $data['menu'] = $this->Menu_model->getMenuMakanan();
+        $this->load->view('menu_makanan/index', $data);
     }
 }

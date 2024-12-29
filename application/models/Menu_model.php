@@ -7,11 +7,12 @@ class Menu_model extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        // Load library atau model yang dibutuhkan
+        $this->load->database();
     }
 
-    public function index()
+    public function getMenuMakanan()
     {
-        // Logic default
+        $query = $this->db->get('menu');
+        return $query->result_array();
     }
 }

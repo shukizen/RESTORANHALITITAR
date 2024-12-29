@@ -7,7 +7,7 @@ class Menu_model extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        // Load library atau model yang dibutuhkan
+        $this->load->database();
     }
 
     public function get_all_menu()

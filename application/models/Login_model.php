@@ -1,14 +1,17 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login_model extends CI_Model {
+class Login_model extends CI_Model
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->database();
     }
 
-    public function checkUser($username, $password) {
+    public function checkUser($username, $password)
+    {
         $this->db->where('username', $username);
         $this->db->where('password', $password);
 
@@ -20,5 +23,4 @@ class Login_model extends CI_Model {
             return false;
         }
     }
-
 }

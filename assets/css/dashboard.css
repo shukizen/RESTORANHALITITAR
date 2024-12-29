@@ -46,7 +46,8 @@ body {
 }
 
 .list-group-item:hover {
-    background-color: #e9ecef;
+    background-color: #e9ecef !important; 
+    color: #007bff !important;
 }
 
 .navbar-nav.ml-auto {

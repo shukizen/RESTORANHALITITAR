@@ -10,8 +10,9 @@ class Menu_model extends CI_Model
         // Load library atau model yang dibutuhkan
     }
 
-    public function index()
+    public function get_all_menu()
     {
-        // Logic default
+        $query = $this->db->get('menu');
+        return $query->result();
     }
 }

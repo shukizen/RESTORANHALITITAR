@@ -8,7 +8,10 @@
 <body>
     <div class="container">
         <h1>Data Pemesanan</h1>
-        <a class="button" href="<?= site_url('pemesanan/create'); ?>">Tambah Pemesanan</a>
+        <div class="button-group">
+            <a class="button" href="<?= site_url('menu'); ?>">Menu</a>
+            <a class="button" href="<?= site_url('pemesanan/create'); ?>">Tambah Pemesanan</a>
+        </div>
         <table>
             <thead>
                 <tr>

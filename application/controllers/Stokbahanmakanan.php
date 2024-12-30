@@ -13,7 +13,7 @@ class Stokbahanmakanan extends CI_Controller
     public function index()
     {
         $data['title'] = 'Stok Bahan Makanan';
-        $data['content'] = 'dashboamrd/stokbahanmakanan';
+        $data['content'] = 'dashboard/stokbahanmakanan';
         $data['stok_bahan'] = $this->Stokbahanmakanan_model->stok_bahan();
         $data['menu_bahan'] = $this->Stokbahanmakanan_model->menu_bahan();
         $this->load->view('dashboard/index', $data);

@@ -11,7 +11,101 @@ h1 {
 a {
     text-decoration: none;
     color: #007BFF;
-    padding: 5px 10px;
+    padding: 5px 10px;body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #007BFF;
+        padding: 5px 10px;
+        margin: 0 10px;
+    }
+    
+    a:hover {
+        background-color: #f0f0f0;
+        border-radius: 5px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    th {
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    
+    tr:hover {
+        background-color: #f9f9f9;
+    }
+    
+    td a {
+        color: #FF5733;
+        margin-right: 10px;
+    }
+    
+    td a:hover {
+        color: #C0392B;
+    }
+    
+    #penjualanChart {
+        margin-top: 40px;
+    }
+    
+    #menuToggle {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #menu {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    #menu ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #menu ul li {
+        margin: 5px 0;
+    }
+    
+    #menu ul li a {
+        text-decoration: none;
+        color: #007bff;
+    }
+    
+    #menu ul li a:hover {
+        text-decoration: underline;
+    }
+    
     margin: 0 10px;
 }
 

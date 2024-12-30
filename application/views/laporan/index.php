@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Laporan Penjualan</title>
     <link rel="stylesheet" type="text/css" href="assets/css/laporan.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!-- Tambahkan tombol Menu -->
+    <button id="menuToggle">Menu</button>
+    <nav id="menu" style="display: none;">
+        <ul>
+            <li><a href="<?= site_url('dashboard') ?>">Dashboard</a></li>
+            <li><a href="<?= site_url('menu_makanan') ?>">Menu Makanan</a></li>
+            <li><a href="<?= site_url('pemesanan') ?>">Pemesanan</a></li>
+            <li><a href="<?= site_url('tagihan') ?>">Perhitungan Tagihan</a></li>
+            <li><a href="<?= site_url('laporan') ?>">Laporan Penjualan</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            var menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+
     <h1>Daftar Laporan Penjualan</h1>
     <a href="<?= site_url('laporan/create') ?>">Tambah Laporan</a>
     <table>
@@ -34,7 +53,6 @@
         <?php endforeach; ?>
     </table>
 
-    <!-- Elemen untuk grafik -->
     <canvas id="penjualanChart" width="400" height="200"></canvas>
 
     <script>

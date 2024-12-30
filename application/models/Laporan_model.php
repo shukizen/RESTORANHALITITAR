@@ -3,14 +3,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Laporan_model extends CI_Model
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->database();
+    }
+
     public function get_all_laporan()
     {
-        return $this->db->get('laporan_penjualan')->result();
+        $query = $this->db->get('laporan_penjualan');
+        return $query->result_array();
     }
 
     public function get_laporan_by_id($id)
     {
-        return $this->db->get_where('laporan_penjualan', ['laporan_id' => $id])->row();
+        $this->db->where('laporan_id', $id);
+        $query = $this->db->get('laporan_penjualan');
+        return $query->row_array();
     }
 
     public function insert_laporan($data)

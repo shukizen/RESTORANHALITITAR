@@ -2,26 +2,33 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pemesanan_model extends CI_Model {
-    
-    public function get_all_pemesanan() {
+    public function get_all() {
         return $this->db->get('pemesanan')->result_array();
     }
 
-    public function get_pemesanan_by_id($id) {
-        return $this->db->get_where('pemesanan', ['id' => $id])->row_array();
+    public function get_by_id($id) {
+        return $this->db->get_where('pemesanan', ['pemesanan_id' => $id])->row_array();
     }
 
-    public function insert_pemesanan($data) {
-        return $this->db->insert('pemesanan', $data);
+    public function create($data) {
+        $this->db->insert('pemesanan', [
+            'nama_pelanggan' => $data['nama_pelanggan'],
+            'tanggal_pemesanan' => date('Y-m-d H:i:s'),
+            'status' => $data['status'],
+            'kasir_id' => $data['kasir_id']
+        ]);
     }
 
-    public function update_pemesanan($id, $data) {
-        $this->db->where('id', $id);
-        return $this->db->update('pemesanan', $data);
+    public function update($id, $data) {
+        $this->db->where('pemesanan_id', $id);
+        $this->db->update('pemesanan', [
+            'nama_pelanggan' => $data['nama_pelanggan'],
+            'status' => $data['status'],
+            'kasir_id' => $data['kasir_id']
+        ]);
     }
 
-    public function delete_pemesanan($id) {
-        $this->db->where('id', $id);
-        return $this->db->delete('pemesanan');
+    public function delete($id) {
+        $this->db->delete('pemesanan', ['pemesanan_id' => $id]);
     }
 }

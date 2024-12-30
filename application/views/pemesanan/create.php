@@ -5,15 +5,17 @@
 </head>
 <body>
     <h1>Tambah Pemesanan</h1>
-    <form method="POST">
-        <label>Nama Pelanggan</label><br>
-        <input type="text" name="nama_pelanggan" required><br>
-        <label>Menu</label><br>
-        <input type="text" name="menu" required><br>
-        <label>Jumlah</label><br>
-        <input type="number" name="jumlah" required><br>
-        <label>Total Harga</label><br>
-        <input type="number" name="total_harga" required><br><br>
+    <form method="post">
+        <label>Nama Pelanggan</label>
+        <input type="text" name="nama_pelanggan">
+        <label>Status</label>
+        <select name="status">
+            <option value="menunggu">Menunggu</option>
+            <option value="lunas">Lunas</option>
+            <option value="batal">Batal</option>
+        </select>
+        <label>Kasir ID</label>
+        <input type="number" name="kasir_id">
         <button type="submit">Simpan</button>
     </form>
 </body>

@@ -5,15 +5,17 @@
 </head>
 <body>
     <h1>Edit Pemesanan</h1>
-    <form method="POST">
-        <label>Nama Pelanggan</label><br>
-        <input type="text" name="nama_pelanggan" value="<?= $pemesanan['nama_pelanggan']; ?>" required><br>
-        <label>Menu</label><br>
-        <input type="text" name="menu" value="<?= $pemesanan['menu']; ?>" required><br>
-        <label>Jumlah</label><br>
-        <input type="number" name="jumlah" value="<?= $pemesanan['jumlah']; ?>" required><br>
-        <label>Total Harga</label><br>
-        <input type="number" name="total_harga" value="<?= $pemesanan['total_harga']; ?>" required><br><br>
+    <form method="post">
+        <label>Nama Pelanggan</label>
+        <input type="text" name="nama_pelanggan" value="<?= $pemesanan['nama_pelanggan']; ?>">
+        <label>Status</label>
+        <select name="status">
+            <option value="menunggu" <?= $pemesanan['status'] == 'menunggu' ? 'selected' : ''; ?>>Menunggu</option>
+            <option value="lunas" <?= $pemesanan['status'] == 'lunas' ? 'selected' : ''; ?>>Lunas</option>
+            <option value="batal" <?= $pemesanan['status'] == 'batal' ? 'selected' : ''; ?>>Batal</option>
+        </select>
+        <label>Kasir ID</label>
+        <input type="number" name="kasir_id" value="<?= $pemesanan['kasir_id']; ?>">
         <button type="submit">Simpan</button>
     </form>
 </body>

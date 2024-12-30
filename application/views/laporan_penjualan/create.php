@@ -51,7 +51,7 @@
             transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #218838;
+            background-color: #0056b3;
         }
     </style>
 </head>

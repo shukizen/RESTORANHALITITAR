@@ -2,23 +2,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <button id="menuToggle">Menu</button>
-    <nav id="menu" style="display: none;">
-        <ul>
-            <li><a href="<?= site_url('dashboard') ?>">Dashboard</a></li>
-            <li><a href="<?= site_url('menumakanan') ?>">Menu Makanan</a></li>
-            <li><a href="<?= site_url('pemesanan') ?>">Pemesanan</a></li>
-            <li><a href="<?= site_url('tagihan') ?>">Perhitungan Tagihan</a></li>
-            <li><a href="<?= site_url('laporan') ?>">Laporan Penjualan</a></li>
-        </ul>
-    </nav>
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function () {
-            var menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
-        });
-    </script>
-
     <h1>Daftar Laporan Penjualan</h1>
     <a href="<?= site_url('laporan/create') ?>">Tambah Laporan</a>
     <table class="laporan-table">

@@ -9,7 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Tambahkan tombol Menu -->
     <button id="menuToggle">Menu</button>
     <nav id="menu" style="display: none;">
         <ul>
@@ -29,7 +28,7 @@
 
     <h1>Daftar Laporan Penjualan</h1>
     <a href="<?= site_url('laporan/create') ?>">Tambah Laporan</a>
-    <table>
+    <table class="laporan-table">
         <tr>
             <th>Tanggal Laporan</th>
             <th>Total Pesanan</th>

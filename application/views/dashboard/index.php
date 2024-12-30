@@ -34,7 +34,7 @@
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
                     <i class="fas fa-calculator"></i>Perhitungan Tagihan
                 </a>
-                <a href="<?php echo site_url('laporan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="<?php echo site_url('laporan_penjualan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <i class="fas fa-boxes"></i>Laporan Penjualan
                 </a>
             </div>

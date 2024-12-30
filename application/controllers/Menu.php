@@ -8,7 +8,6 @@ class Menu extends CI_Controller
         parent::__construct();
         // Load model Menu_model
         $this->load->model('Menu_model');
-        $this->load->model('Laporan_model');
     }
 
     public function menumakanan()

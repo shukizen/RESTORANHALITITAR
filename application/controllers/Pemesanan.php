@@ -9,8 +9,10 @@ class Pemesanan extends CI_Controller {
     }
 
     public function index() {
+        $data['title'] = 'Data Pemesanan';
+        $data['content'] = 'dashboard/pemesanan';
         $data['pemesanan'] = $this->Pemesanan_model->get_all();
-        $this->load->view('pemesanan/index', $data);
+        $this->load->view('dashboard/index', $data);
     }
 
     public function create() {

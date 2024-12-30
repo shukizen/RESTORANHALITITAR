@@ -1,11 +1,9 @@
-/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -14,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: auto;
@@ -24,7 +21,6 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
 header {
     background: #007BFF;
     color: #fff;
@@ -38,7 +34,6 @@ header h1 {
     margin: 0;
 }
 
-/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -46,7 +41,7 @@ table {
 }
 
 table thead {
-    background: #007BFF;
+    background: #c1c5c9;
     color: #fff;
 }
 
@@ -71,10 +66,9 @@ table th {
     text-transform: uppercase;
 }
 
-/* Button Styles */
 button {
-    background-color: #007BFF;
-    color: white;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     font-size: 14px;
@@ -82,8 +76,10 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+button:hover, button:focus, button:active {
+    background-color: #007bff;
+    color: #fff;
+    outline: none;
 }
 
 .button-group {
@@ -98,7 +94,6 @@ button:hover {
     text-align: center;
 }
 
-/* Form Styles */
 form {
     margin-top: 20px;
 }
@@ -119,14 +114,12 @@ form textarea {
     border-radius: 4px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     margin-top: 20px;
     color: #666;
 }
 
-/* Alert Styles */
 .alert {
     padding: 15px;
     margin-bottom: 20px;
@@ -146,7 +139,6 @@ footer {
     border-color: #f5c6cb;
 }
 
-/* Card Styles */
 .card {
     background: #fff;
     border: 1px solid #ddd;

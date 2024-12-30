@@ -6,8 +6,8 @@
 </head>
 <body>
     <div class="container">
+    <a class="back-link" href="<?= site_url('pemesanan'); ?>">Kembali</a>
         <h1>Tambah Pemesanan</h1>
-        <a class="back-link" href="<?= site_url('pemesanan'); ?>">Kembali</a>
         <form method="post">
             <label>Nama Pelanggan</label>
             <input type="text" name="nama_pelanggan">

@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Data Pemesanan</title>
-    <style>
+<style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
@@ -107,5 +103,4 @@
             </tbody>
         </table>
     </div>
-</body>
-</html>
+

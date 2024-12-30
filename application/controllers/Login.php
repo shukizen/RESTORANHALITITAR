@@ -41,9 +41,8 @@ class Login extends CI_Controller
 
     public function logout()
     {
-        // Hapus semua data sesi
+
         $this->session->sess_destroy();
-        // Arahkan ke halaman login
         redirect('login');
     }
 }

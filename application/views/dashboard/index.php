@@ -20,19 +20,22 @@
             <div class="sidebar-heading">Manajemen Restoran Halititar</div>
             <div class="list-group list-group-flush">
                 <a href="<?php echo site_url('dashboard'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                    <i class="fas fa-tachometer-alt"></i>Dashboard
                 </a>
                 <a href="<?php echo site_url('menumakanan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-utensils"></i> Menu Makanan
+                    <i class="fas fa-utensils"></i>Menu Makanan
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-receipt"></i> Pemesanan
+                    <i class="fas fa-receipt"></i>Pemesanan
+                </a>
+                <a href="<?php echo site_url('stokbahanmakanan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
+                    <i class="fas fa-boxes"></i>Stok Bahan Makanan
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-calculator"></i> Perhitungan Tagihan
+                    <i class="fas fa-calculator"></i>Perhitungan Tagihan
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-chart-line"></i> Laporan Penjualan
+                    <i class="fas fa-chart-line"></i>Laporan Penjualan
                 </a>
             </div>
         </div>

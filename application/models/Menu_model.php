@@ -13,6 +13,6 @@ class Menu_model extends CI_Model
     public function get_all_menu()
     {
         $query = $this->db->get('menu');
-        return $query->result();
+        return $query->result_array();
     }
 }

@@ -14,7 +14,7 @@ class Dashboard extends CI_Controller
     public function index()
     {
         $data['title'] = 'Dashboard';
-        $data['content'] = 'dashboard/dashboard_content'; // Path ke view dashboard_content
+        $data['content'] = 'dashboard/dashboard_content';
         $this->load->view('dashboard/index', $data);
     }
 }

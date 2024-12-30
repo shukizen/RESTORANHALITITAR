@@ -7,11 +7,6 @@ class Dashboard_model extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        // Load library atau model yang dibutuhkan
-    }
-
-    public function index()
-    {
-        // Logic default
+        $this->load->database();
     }
 }

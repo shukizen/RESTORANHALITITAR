@@ -1,73 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Management - Laporan Penjualan</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/laporan.css'); ?>">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Daftar Laporan Penjualan</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/laporan.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div class="heading">
-            <h1>Laporan Penjualan</h1>
-        </div>
+    <h1>Daftar Laporan Penjualan</h1>
+    <a href="<?= site_url('laporan/create') ?>">Tambah Laporan</a>
+    <table>
+        <tr>
+            <th>Tanggal Laporan</th>
+            <th>Total Pesanan</th>
+            <th>Total Menu Terjual</th>
+            <th>Total Pendapatan</th>
+            <th>Created At</th>
+            <th>Aksi</th>
+        </tr>
+        <?php foreach ($laporan as $row) : ?>
+            <tr>
+                <td><?= $row->tanggal_laporan ?></td>
+                <td><?= $row->total_pesanan ?></td>
+                <td><?= $row->total_menu_terjual ?></td>
+                <td><?= $row->total_pendapatan ?></td>
+                <td><?= $row->created_at ?></td>
+                <td>
+                    <a href="<?= site_url('laporan/edit/' . $row->laporan_id) ?>">Edit</a>
+                    <a href="<?= site_url('laporan/delete/' . $row->laporan_id) ?>">Hapus</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
 
-        <div class="mb-4">
-            <a href="<?php echo base_url('laporan/tambah'); ?>" class="btn btn-add">
-                <i class="fas fa-plus"></i> Tambah Laporan
-            </a>
-        </div>
+    <!-- Elemen untuk grafik -->
+    <canvas id="penjualanChart" width="400" height="200"></canvas>
 
-        <table class="table-laporan">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Tanggal Laporan</th>
-                    <th>Total Pesanan</th>
-                    <th>Total Menu Terjual</th>
-                    <th>Total Pendapatan</th>
-                    <th>Created At</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (!empty($laporan)) : ?>
-                    <?php $no = 1; foreach ($laporan as $item) : ?>
-                        <tr>
-                            <td><?php echo $no++; ?></td>
-                            <td><?php echo $item->tanggal_laporan; ?></td>
-                            <td><?php echo $item->total_pesanan; ?></td>
-                            <td><?php echo $item->total_menu_terjual; ?></td>
-                            <td>Rp <?php echo number_format($item->total_pendapatan, 0, ',', '.'); ?></td>
-                            <td><?php echo date('d-m-Y H:i:s', strtotime($item->created_at)); ?></td>
-                            <td>
-                                <a href="<?php echo base_url('laporan/edit/' . $item->laporan_id); ?>" class="btn btn-edit">
-                                    <i class="fas fa-edit"></i> Edit
-                                </a>
-                                <a href="<?php echo base_url('laporan/hapus/' . $item->laporan_id); ?>" class="btn btn-delete" onclick="return confirm('Apakah Anda yakin ingin menghapus laporan ini?')">
-                                    <i class="fas fa-trash"></i> Hapus
-                                </a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                <?php else : ?>
-                    <tr>
-                        <td colspan="7" class="text-center">Tidak ada data laporan penjualan.</td>
-                    </tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var ctx = document.getElementById('penjualanChart').getContext('2d');
+        var penjualanChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [<?php foreach ($laporan as $row) { echo '"' . $row->tanggal_laporan . '",'; } ?>],
+                datasets: [{
+                    label: 'Total Pendapatan',
+                    data: [<?php foreach ($laporan as $row) { echo $row->total_pendapatan . ','; } ?>],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Grafik Total Pendapatan Penjualan'
+                    }
+                }
+            }
+        });
+    </script>
 </body>
-
 </html>

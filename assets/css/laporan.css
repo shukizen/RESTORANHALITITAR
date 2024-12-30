@@ -1,89 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-.container {
-    margin-top: 20px;
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-.heading h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #343a40;
-    margin-bottom: 20px;
+a {
+    text-decoration: none;
+    color: #007BFF;
+    padding: 5px 10px;
+    margin: 0 10px;
 }
 
-.btn {
+a:hover {
+    background-color: #f0f0f0;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-weight: 600;
 }
 
-.btn-add {
-    background-color: #28a745;
-    color: white;
-}
-
-.btn-add:hover {
-    background-color: #218838;
-}
-
-.btn-edit {
-    background-color: #007bff;
-    color: white;
-}
-
-.btn-edit:hover {
-    background-color: #0056b3;
-}
-
-.btn-delete {
-    background-color: #dc3545;
-    color: white;
-}
-
-.btn-delete:hover {
-    background-color: #c82333;
-}
-
-.table-laporan {
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-}
-
-.table-laporan th, .table-laporan td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #dee2e6;
-}
-
-.table-laporan th {
-    background-color: #f1f1f1;
-    font-weight: 600;
-    color: #495057;
-}
-
-.table-laporan td {
-    background-color: #ffffff;
-    color: #495057;
-}
-
-.table-laporan tr:hover {
-    background-color: #f1f1f1;
-}
-
-.text-center {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .table-laporan th, .table-laporan td {
-        font-size: 0.9rem;
-    }
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+td a {
+    color: #FF5733;
+    margin-right: 10px;
+}
+
+td a:hover {
+    color: #C0392B;
+}
+
+#penjualanChart {
+    margin-top: 40px;
 }

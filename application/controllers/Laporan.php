@@ -11,45 +11,57 @@ class Laporan extends CI_Controller
 
     public function index()
     {
+        $data['title'] = 'Data Laporan';
+        $data['content'] = 'dashboard/laporan';
         $data['laporan'] = $this->Laporan_model->get_all_laporan();
-        $this->load->view('laporan/index', $data);
+        $this->load->view('dashboard/index', $data);
     }
 
-    public function create()
+    public function tambah()
     {
-        if ($_POST) {
-            $data = [
+        $data['title'] = 'Tambah Laporan';
+        $data['content'] = 'dashboard/tambah_laporan';
+
+        if ($this->input->post()) {
+            $laporan_data = array(
                 'tanggal_laporan' => $this->input->post('tanggal_laporan'),
                 'total_pesanan' => $this->input->post('total_pesanan'),
                 'total_menu_terjual' => $this->input->post('total_menu_terjual'),
                 'total_pendapatan' => $this->input->post('total_pendapatan'),
-                'created_at' => date('Y-m-d H:i:s'),
-            ];
-            $this->Laporan_model->insert_laporan($data);
-            redirect('laporan');
+                'created_at' => date('Y-m-d H:i:s')
+            );
+
+            $this->Laporan_model->insert_laporan($laporan_data);
+            redirect('Laporan');
         }
-        $this->load->view('laporan/create');
+
+        $this->load->view('dashboard/index', $data);
     }
 
     public function edit($id)
     {
+        $data['title'] = 'Edit Laporan';
+        $data['content'] = 'dashboard/edit_laporan';
         $data['laporan'] = $this->Laporan_model->get_laporan_by_id($id);
-        if ($_POST) {
-            $data = [
+
+        if ($this->input->post()) {
+            $update_data = array(
                 'tanggal_laporan' => $this->input->post('tanggal_laporan'),
                 'total_pesanan' => $this->input->post('total_pesanan'),
                 'total_menu_terjual' => $this->input->post('total_menu_terjual'),
-                'total_pendapatan' => $this->input->post('total_pendapatan'),
-            ];
-            $this->Laporan_model->update_laporan($id, $data);
-            redirect('laporan');
+                'total_pendapatan' => $this->input->post('total_pendapatan')
+            );
+
+            $this->Laporan_model->update_laporan($id, $update_data);
+            redirect('Laporan');
         }
-        $this->load->view('laporan/edit', $data);
+
+        $this->load->view('dashboard/index', $data);
     }
 
     public function delete($id)
     {
         $this->Laporan_model->delete_laporan($id);
-        redirect('laporan');
+        redirect('Laporan');
     }
 }

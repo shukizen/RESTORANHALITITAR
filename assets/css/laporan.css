@@ -6,6 +6,8 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 a {
@@ -20,28 +22,29 @@ a:hover {
     border-radius: 5px;
 }
 
-table {
+.laporan-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
-table, th, td {
+.laporan-table th, .laporan-table td {
     border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 8px;
+    padding: 10px;
     font-size: 14px;
 }
 
-th {
+.laporan-table th {
     background-color: #f4f4f4;
-    color: #333;
+    color: #000
 }
 
-tr:hover {
+.laporan-table td {
+    background-color: #fff;
+}
+
+.laporan-table tr:hover {
     background-color: #f9f9f9;
 }
 
@@ -65,6 +68,7 @@ td a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 #menu {
@@ -91,24 +95,4 @@ td a:hover {
 
 #menu ul li a:hover {
     text-decoration: underline;
-}
-
-.laporan-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-}
-
-.laporan-table th, .laporan-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-.laporan-table th {
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.laporan-table td {
-    text-align: center;
 }

@@ -25,7 +25,7 @@
                 <a href="<?php echo site_url('menumakanan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <i class="fas fa-utensils"></i>Menu Makanan
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="<?php echo site_url('pemesanan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
                     <i class="fas fa-receipt"></i>Pemesanan
                 </a>
                 <a href="<?php echo site_url('stokbahanmakanan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
@@ -35,7 +35,7 @@
                     <i class="fas fa-calculator"></i>Perhitungan Tagihan
                 </a>
                 <a href="<?php echo site_url('laporan_penjualan'); ?>" class="list-group-item list-group-item-action bg-dark text-white">
-                    <i class="fas fa-boxes"></i>Laporan Penjualan
+                    <i class="fas fa-chart-line"></i>Laporan Penjualan
                 </a>
             </div>
         </div>
